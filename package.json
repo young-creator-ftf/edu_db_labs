@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kyrylogomberg.github.io/edu_db_labs",
   "name": "edu_db_labs",
   "version": "2.1.0",
   "main": "index.js",
@@ -6,10 +7,10 @@
   "repository": "https://github.com/boldak/dis-edu",
   "author": "Andrey Boldak <boldak.andrey@gmail.com>",
   "license": "ECL 2.0",
-  "scripts": {
-    "docs:dev": "npx vuepress dev docs",
-    "docs:build": "npx vuepress build docs",
-    "publish": "publish.sh"
+"scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "vitepress": "^1.6.3"
