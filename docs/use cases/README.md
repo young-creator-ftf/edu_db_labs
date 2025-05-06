@@ -10,45 +10,63 @@
 >
 
 @startuml
-  actor "Користувач" as User
-  actor "Менеджер" as Manager
-  actor "Адміністратор" as Admin
-  
-  Manager --u-|> User
-  Admin -u-|> Manager
-  
-  usecase "<b>AccountManage</b>\nКерувати обліковим записом" as AccountManage
-  usecase "<b>NotificationManage</b>\nКерувати сповіщеннями" as NotificationManage
-  usecase "<b>TaskManage</b>\nКерувати задачами" as TaskManage
-  usecase "<b>WriteToSupport</b>\nНаписати в підтримку" as WriteToSupport
-  usecase "<b>ProjectManage</b>\nКерувати проєктом" as ProjectManage
-  usecase "<b>TeamManage</b>\nКерувати командою" as TeamManage
-  usecase "<b>BoardManage</b>\nКерувати дошкою" as BoardManage
-  usecase "<b>ProjectTemplateManage</b>\nКерувати шаблоном\nпроєкту" as ProjectTemplateManage
-  usecase "<b>ProjectWorkflowMonitor</b>\nВідстежувати робочий\nпроцес проєкту" as ProjectWorkflowMonitor
-  usecase "<b>DevToolsManage</b>\nКерувати інструментами\nрозробника" as DevToolsManage
-  usecase "<b>PermissionsManage</b>\nКерувати дозволами" as PermissionsManage
-  usecase "<b>SystemConfigManage</b>\nКерувати налаштуваннями\nсистеми" as SystemConfigManage
-  
-  User -u-> AccountManage
-  User -u-> NotificationManage
-  User -l-> TaskManage
-  User -r-> WriteToSupport
-  
-  Manager -r-> ProjectTemplateManage
-  Manager -l-> TeamManage
-  Manager -u-> DevToolsManage
-  Manager -u-> ProjectWorkflowMonitor
-  TaskManage -[hidden]-> DevToolsManage
-  WriteToSupport -[hidden]-> ProjectWorkflowMonitor
-  
-  Manager -d-> ProjectManage
-  Manager -d-> BoardManage
-  BoardManage -[hidden]-> SystemConfigManage
-  ProjectManage <-[hidden]- PermissionsManage
-  Admin -r-> PermissionsManage
-  Admin -l-> SystemConfigManage
-  
+' === Загальні налаштування ===
+skinparam backgroundColor #FDFDFD
+skinparam shadowing false
+skinparam RoundCorner 15
+skinparam actor {
+  BackgroundColor #D0E6FA
+  BorderColor #3794FF
+  FontColor #03396C
+}
+skinparam usecase {
+  BackgroundColor #F8E0E6
+  BorderColor #D53E53
+  FontColor #731F1F
+}
+
+' === Актори з індивідуальним кольором ===
+actor "Користувач" as User #AED6F1
+actor "Менеджер" as Manager #ABEBC6
+actor "Адміністратор" as Admin #F5B7B1
+
+Manager --u-|> User
+Admin -u-|> Manager
+
+' === Use-case-и з кольором ===
+usecase "<b>AccountManage</b>\nКерувати обліковим записом" as AccountManage #D6EAF8
+usecase "<b>NotificationManage</b>\nКерувати сповіщеннями" as NotificationManage #D6EAF8
+usecase "<b>TaskManage</b>\nКерувати задачами" as TaskManage #D6EAF8
+usecase "<b>WriteToSupport</b>\nНаписати в підтримку" as WriteToSupport #F9E79F
+
+usecase "<b>ProjectManage</b>\nКерувати проєктом" as ProjectManage #A9DFBF
+usecase "<b>TeamManage</b>\nКерувати командою" as TeamManage #A9DFBF
+usecase "<b>BoardManage</b>\nКерувати дошкою" as BoardManage #A9DFBF
+
+usecase "<b>ProjectTemplateManage</b>\nКерувати шаблоном\nпроєкту" as ProjectTemplateManage #EBDEF0
+usecase "<b>ProjectWorkflowMonitor</b>\nВідстежувати робочий\nпроцес проєкту" as ProjectWorkflowMonitor #EBDEF0
+usecase "<b>DevToolsManage</b>\nКерувати інструментами\nрозробника" as DevToolsManage #EBDEF0
+
+usecase "<b>PermissionsManage</b>\nКерувати дозволами" as PermissionsManage #F5CBA7
+usecase "<b>SystemConfigManage</b>\nКерувати налаштуваннями\nсистеми" as SystemConfigManage #F5CBA7
+
+' === Стрілки використання ===
+User -u-> AccountManage
+User -u-> NotificationManage
+User -l-> TaskManage
+User -r-> WriteToSupport
+
+Manager -r-> ProjectTemplateManage
+Manager -l-> TeamManage
+Manager -u-> DevToolsManage
+Manager -u-> ProjectWorkflowMonitor
+
+Manager -d-> ProjectManage
+Manager -d-> BoardManage
+
+Admin -r-> PermissionsManage
+Admin -l-> SystemConfigManage
+
 @enduml
 
 </center>
@@ -63,43 +81,67 @@
 >
 
 @startuml
+' === Загальні налаштування стилю ===
+skinparam backgroundColor #FCFCFC
+skinparam RoundCorner 12
+skinparam shadowing false
+
+' === Стиль для акторів ===
+skinparam actor {
+  BackgroundColor #AEDFF7
+  BorderColor #3498DB
+  FontColor #1B2631
+}
+
+' === Стиль для use case-ів ===
+skinparam usecase {
+  BorderColor #566573
+  FontColor #1B2631
+}
+
+' === Актор ===
 actor "Користувач" as User
 
-usecase "<b>AccountManage</b>\nКерувати обліковим записом" as AccountManage
-usecase "<b>NotificationManage</b>\nКерувати сповіщеннями" as NotificationManage
-usecase "<b>TaskManage</b>\nКерувати задачами" as TaskManage
-usecase "<b>WriteToSupport</b>\nНаписати в підтримку" as WriteToSupport
+' === Керування обліковим записом (зелений) ===
+usecase "<b>AccountManage</b>\nКерувати обліковим записом"           as AccountManage #ABEBC6
+usecase "<b>SignUpAccount</b>\nСтворити обліковий запис"            as SignUpAccount #ABEBC6
+usecase "<b>LogIntoAccount</b>\nУвійти в обліковий запис"          as LogIntoAccount #ABEBC6
+usecase "<b>EditAccount</b>\nРедагувати обліковий запис"          as EditAccount #ABEBC6
+usecase "<b>DeleteAccount</b>\nВидалити обліковий запис"          as DeleteAccount #ABEBC6
 
 User -l-> AccountManage
+SignUpAccount   ..d.> AccountManage :<<extends>>
+LogIntoAccount  ..r.> AccountManage :<<extends>>
+EditAccount     ..u.> AccountManage :<<extends>>
+DeleteAccount   ..u.> AccountManage :<<extends>>
+
+' === Сповіщення (рожевий) ===
+usecase "<b>NotificationManage</b>\nКерувати сповіщеннями"         as NotificationManage #F5B7B1
+usecase "<b>SetNotification</b>\nПідписатись на сповіщення"        as SetNotification #F5B7B1
+usecase "<b>DeleteNotification</b>\nСкасувати підписку"           as DeleteNotification #F5B7B1
+
 User -u-> NotificationManage
+SetNotification    ..d.> NotificationManage :<<extends>>
+DeleteNotification ..l.> NotificationManage :<<extends>>
+
+' === Завдання (помаранчевий) ===
+usecase "<b>TaskManage</b>\nКерувати задачами"                     as TaskManage #F8C471
+usecase "<b>CreateTask</b>\nСтворити задачу"                      as CreateTask #F8C471
+usecase "<b>EditTask</b>\nРедагувати задачу"                      as EditTask #F8C471
+usecase "<b>DeleteTask</b>\nВидалити задачу"                      as DeleteTask #F8C471
+
 User -r-> TaskManage
+CreateTask   ..u.> TaskManage :<<extends>>
+EditTask     ..l.> TaskManage :<<extends>>
+DeleteTask   ..u.> TaskManage :<<extends>>
+
+' === Підтримка (фіолетовий) ===
+usecase "<b>WriteToSupport</b>\nНаписати в підтримку"              as WriteToSupport #D2B4DE
+
 User -d-> WriteToSupport
 
-usecase "<b>SignUpAccount</b>\nСтворити обліковий запис" as SignUpAccount
-usecase "<b>LogIntoAccount</b>\nУвійти в обліковий запис" as LogIntoAccount
-usecase "<b>EditAccount</b>\nРедагувати обліковий запис" as EditAccount
-usecase "<b>DeleteAccount</b>\nВидалити обліковий запис" as DeleteAccount
-
-SignUpAccount ..d.> AccountManage :extends
-LogIntoAccount ..r.> AccountManage :extends
-EditAccount ..u.> AccountManage :extends
-DeleteAccount ..u.> AccountManage :extends
-
-usecase "<b>SetNotification</b>\nПідписатись на сповіщення" as SetNotification
-usecase "<b>DeleteNotification</b>\nСкасувати підписку на сповіщення" as DeleteNotification
-
-SetNotification ..d.> NotificationManage :extends
-DeleteNotification ..l.> NotificationManage :extends
-
-usecase "<b>CreateTask</b>\nСтворити задачу" as CreateTask
-usecase "<b>EditTask</b>\nРедагувати задачу" as EditTask
-usecase "<b>DeleteTask</b>\nВидалити задачу" as DeleteTask
-
-CreateTask ..u.> TaskManage :extends
-EditTask ..l.> TaskManage :extends
-DeleteTask ..u.> TaskManage :extends
-
 @enduml
+
 
 </center>
 
@@ -113,52 +155,80 @@ DeleteTask ..u.> TaskManage :extends
 >
 
 @startuml
-  actor "Менеджер" as Manager
+' === Загальні налаштування стилю ===
+skinparam backgroundColor #FAFAFA
+skinparam RoundCorner 12
+skinparam shadowing false
 
-  usecase "<b>ProjectManage</b>\nКерувати проєктом" as ProjectManage
-  usecase "<b>CreateProject</b>\nСтворити проєкт" as CreateProject
-  usecase "<b>EditPoject</b>\nРедагувати проєкт" as EditPoject
-  usecase "<b>DeleteProject</b>\nВидаляти проєкт" as DeleteProject
+skinparam actor {
+  BackgroundColor #ABEBC6
+  BorderColor #229954
+  FontColor #1B2631
+}
 
-  usecase "<b>TeamManage</b>\nКерувати командою" as TeamManage
-  usecase "<b>AddUserToProject</b>\nДодати користувача\nдо проєкту" as AddUserToProject
-  usecase "<b>RemoveUserFromProject</b>\nВидалити користувача\nз проєкту" as RemoveUserFromProject
+skinparam usecase {
+  BorderColor #566573
+  FontColor #1B2631
+}
 
-  usecase "<b>BoardManage</b>\nКерувати дошкою" as BoardManage
-  usecase "<b>CreateBoard</b>\nСтворити дошку" as CreateBoard
-  usecase "<b>EditBoard</b>\nРедагувати дошку" as EditBoard
-  usecase "<b>DeleteBoard</b>\nВидаляти дошку" as DeleteBoard
+' === Актор ===
+actor "Менеджер" as Manager
 
-  usecase "<b>ProjectTemplateManage</b>\nКерувати шаблоном\nпроєкту" as ProjectTemplateManage
-  usecase "<b>CreateProjectTemplate</b>\nСтворити шаблон проєкту" as CreateProjectTemplate
-  usecase "<b>ApplyTemplateToProject</b>\nЗастосувати шаблон\nдо проєкту" as ApplyTemplateToProject
-  usecase "<b>DeleteProjectTemplate</b>\nВидалити шаблон проєкту" as DeleteProjectTemplate
+' === Управління проєктом ===
+usecase "<b>ProjectManage</b>\nКерувати проєктом" as ProjectManage #A3E4D7
+usecase "<b>CreateProject</b>\nСтворити проєкт" as CreateProject #A3E4D7
+usecase "<b>EditPoject</b>\nРедагувати проєкт" as EditPoject #A3E4D7
+usecase "<b>DeleteProject</b>\nВидаляти проєкт" as DeleteProject #A3E4D7
 
-  usecase "<b>ProjectWorkflowMonitor</b>\nВідстежувати робочий\nпроцес проєкту" as ProjectWorkflowMonitor
-  usecase "<b>DevToolsManage</b>\nКерувати інструментами\nрозробника" as DevToolsManage
+' === Управління командою ===
+usecase "<b>TeamManage</b>\nКерувати командою" as TeamManage #AED6F1
+usecase "<b>AddUserToProject</b>\nДодати користувача\nдо проєкту" as AddUserToProject #AED6F1
+usecase "<b>RemoveUserFromProject</b>\nВидалити користувача\nз проєкту" as RemoveUserFromProject #AED6F1
 
-  Manager -l-> ProjectManage
-  Manager -d-> TeamManage
-  Manager -u-> DevToolsManage
-  Manager -u-> ProjectWorkflowMonitor
-  Manager -r-> ProjectTemplateManage
-  Manager -d-> BoardManage
+' === Управління дошкою ===
+usecase "<b>BoardManage</b>\nКерувати дошкою" as BoardManage #FCF3CF
+usecase "<b>CreateBoard</b>\nСтворити дошку" as CreateBoard #FCF3CF
+usecase "<b>EditBoard</b>\nРедагувати дошку" as EditBoard #FCF3CF
+usecase "<b>DeleteBoard</b>\nВидаляти дошку" as DeleteBoard #FCF3CF
 
-  CreateProject ..u.> ProjectManage :extends
-  EditPoject .r.> ProjectManage :extends
-  DeleteProject ..d.> ProjectManage :extends
+' === Шаблони проєктів ===
+usecase "<b>ProjectTemplateManage</b>\nКерувати шаблоном\nпроєкту" as ProjectTemplateManage #F5B7B1
+usecase "<b>CreateProjectTemplate</b>\nСтворити шаблон проєкту" as CreateProjectTemplate #F5B7B1
+usecase "<b>ApplyTemplateToProject</b>\nЗастосувати шаблон\nдо проєкту" as ApplyTemplateToProject #F5B7B1
+usecase "<b>DeleteProjectTemplate</b>\nВидалити шаблон проєкту" as DeleteProjectTemplate #F5B7B1
 
-  AddUserToProject ..u.> TeamManage :extends
-  RemoveUserFromProject ..u.> TeamManage :extends
+' === Моніторинг і інструменти ===
+usecase "<b>ProjectWorkflowMonitor</b>\nВідстежувати робочий\nпроцес проєкту" as ProjectWorkflowMonitor #D2B4DE
+usecase "<b>DevToolsManage</b>\nКерувати інструментами\nрозробника" as DevToolsManage #D2B4DE
 
-  CreateProjectTemplate ..d.> ProjectTemplateManage :extends
-  ApplyTemplateToProject ..u.> ProjectTemplateManage :extends
-  DeleteProjectTemplate .l.> ProjectTemplateManage :extends
+' === Зв'язки актора з use-case-ами ===
+Manager -l-> ProjectManage
+Manager -d-> TeamManage
+Manager -d-> BoardManage
+Manager -r-> ProjectTemplateManage
+Manager -u-> DevToolsManage
+Manager -u-> ProjectWorkflowMonitor
 
-  CreateBoard ..u.> BoardManage :extends
-  EditBoard ..u.> BoardManage :extends
-  DeleteBoard ..u.> BoardManage :extends
+' === Розширення сцен для ProjectManage ===
+CreateProject   ..u.> ProjectManage :extends
+EditPoject      ..r.> ProjectManage :extends
+DeleteProject  ..d.> ProjectManage :extends
+
+' === Розширення сцен для TeamManage ===
+AddUserToProject        ..u.> TeamManage :extends
+RemoveUserFromProject   ..u.> TeamManage :extends
+
+' === Розширення сцен для BoardManage ===
+CreateBoard   ..u.> BoardManage :extends
+EditBoard     ..u.> BoardManage :extends
+DeleteBoard   ..u.> BoardManage :extends
+
+' === Розширення сцен для ProjectTemplateManage ===
+CreateProjectTemplate    ..d.> ProjectTemplateManage :extends
+ApplyTemplateToProject   ..u.> ProjectTemplateManage :extends
+DeleteProjectTemplate    ..l.> ProjectTemplateManage :extends
 @enduml
+
 
 </center>
 
@@ -172,26 +242,49 @@ DeleteTask ..u.> TaskManage :extends
 >
 
 @startuml
-  actor "Адміністратор" as Administrator
-  
-  usecase "<b>BlockProject</b>\nЗаблокувати проєкт" as BlockProject
-  usecase "<b>UnblockProject</b>\nРозблокувати проєкт" as UnblockProject
-  usecase "<b>BanUser</b>\nЗаблокувати користувача" as BanUser
-  usecase "<b>UnbanUser</b>\nРозблокувати користувача" as UnbanUser
-  usecase "<b>EditSystemSettings</b>\nЗмінити системні налаштування" as EditSystemSettings
-  
-  usecase "<b>PermissionsManage</b>\nКерувати дозволами" as PermissionsManage
-  usecase "<b>SystemConfigManage</b>\nКерувати налаштуваннями системи" as SystemConfigManage
+' === Загальні налаштування стилю ===
+skinparam backgroundColor #FAFAFA
+skinparam RoundCorner 12
+skinparam shadowing false
 
-  Administrator -d-> PermissionsManage
-  Administrator -d-> SystemConfigManage
-  
-  BlockProject ..u.> PermissionsManage :extends
-  UnblockProject .l.> PermissionsManage :extends
-  BanUser ..u.> PermissionsManage :extends
-  UnbanUser ..u.> PermissionsManage :extends
-  
-  EditSystemSettings ..u.> SystemConfigManage :extends
+skinparam actor {
+  BackgroundColor #FDEBD0
+  BorderColor #DC7633
+  FontColor #874E3C
+}
+
+skinparam usecase {
+  BorderColor #566573
+  FontColor #1B2631
+}
+
+' === Актор ===
+actor "Адміністратор" as Administrator
+
+' === Управління дозволами та конфігурацією ===
+usecase "<b>PermissionsManage</b>\nКерувати дозволами" as PermissionsManage #FCF3CF
+usecase "<b>SystemConfigManage</b>\nКерувати налаштуваннями системи" as SystemConfigManage #FCF3CF
+
+' === Блокування та розблокування проєктів/користувачів ===
+usecase "<b>BlockProject</b>\nЗаблокувати проєкт" as BlockProject #F5CBA7
+usecase "<b>UnblockProject</b>\nРозблокувати проєкт" as UnblockProject #F5CBA7
+usecase "<b>BanUser</b>\nЗаблокувати користувача" as BanUser #F5CBA7
+usecase "<b>UnbanUser</b>\nРозблокувати користувача" as UnbanUser #F5CBA7
+
+' === Редагування системних налаштувань ===
+usecase "<b>EditSystemSettings</b>\nЗмінити системні\nналаштування" as EditSystemSettings #D2B4DE
+
+' === Зв’язки актора з use-case-ами ===
+Administrator -d-> PermissionsManage
+Administrator -d-> SystemConfigManage
+
+' === Розширення сценаріїв ===
+BlockProject    ..u.> PermissionsManage    :extends
+UnblockProject  .l.> PermissionsManage    :extends
+BanUser         ..u.> PermissionsManage    :extends
+UnbanUser       ..u.> PermissionsManage    :extends
+
+EditSystemSettings ..u.> SystemConfigManage :extends
 @enduml
 
 </center>
@@ -214,12 +307,12 @@ DeleteTask ..u.> TaskManage :extends
      <tr>
         <td><b>Передумови:</b></td>
         <td>
-        - Користувач не зареєстрований<br/>
+        - Користувач ще не зареєстрований у системі<br/>
         </td>
     </tr>
      <tr>
         <td><b>Результат:</b></td>
-        <td>Новий обліковий запис</td>
+        <td>У системі з’явився новий обліковий запис</td>
     </tr>
      <tr>
         <td><b>Виключні ситуації:</b></td>
