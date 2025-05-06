@@ -415,34 +415,34 @@
 
 ## Посилання
 
-<a name="link1"></a>[1] <https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8> 
+### [1] https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8 {#link1}
 
-<a name="link2"></a>[2] <https://uk.wikipedia.org/wiki/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8> 
+### [2] https://uk.wikipedia.org/wiki/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8 {#link2}
 
-<a name="link3"></a>[3] <https://uk.wikipedia.org/wiki/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8> 
+### [3] https://uk.wikipedia.org/wiki/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8 {#link3}
 
-<a name="link4"></a>[4] <https://pidru4niki.com/12810419/ekonomika/zhittyeviy_tsikl_proektu#:~:text=%D0%96%D0%B8%D1%82%D1%82%D1%94%D0%B2%D0%B8%D0%B9%20%D1%86%D0%B8%D0%BA%D0%BB%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%83%20%E2%80%93%20%D1%86%D0%B5%20%D0%BF%D0%B5%D1%80%D1%96%D0%BE%D0%B4,%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BD%D1%8C%D0%BE%D1%97%20%D0%B2%D0%B8%D0%B3%D0%BE%D0%B4%D0%B8%20(%D0%BB%D1%96%D0%BA%D0%B2%D1%96%D0%B4%D0%B0%D1%86%D1%96%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%83).> 
+### [4] https://pidru4niki.com/12810419/ekonomika/zhittyeviy_tsikl_proektu#:~:text=%D0%96%D0%B8%D1%82%D1%82%D1%94%D0%B2%D0%B8%D0%B9%20%D1%86%D0%B8%D0%BA%D0%BB%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%83%20%E2%80%93%20%D1%86%D0%B5%20%D0%BF%D0%B5%D1%80%D1%96%D0%BE%D0%B4,%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BD%D1%8C%D0%BE%D1%97%20%D0%B2%D0%B8%D0%B3%D0%BE%D0%B4%D0%B8%20(%D0%BB%D1%96%D0%BA%D0%B2%D1%96%D0%B4%D0%B0%D1%86%D1%96%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%83). {#link4}
 
-<a name="link5"></a>[5] <https://ru.wikipedia.org/wiki/UML> 
+### [5] https://ru.wikipedia.org/wiki/UML {#link5}
 
-<a name="link6"></a>[6] <https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F_%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%BD%D1%8F#:~:text=Software%20development%20methodology)%20%E2%80%94%20%D1%81%D1%83%D0%BA%D1%83%D0%BF%D0%BD%D1%96%D1%81%D1%82%D1%8C%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%96%D0%B2,%D0%B7%D0%B0%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%87%D0%B8%D1%82%D0%B8%20%D0%BD%D0%B0%D0%B9%D0%BA%D1%80%D0%B0%D1%89%D1%83%20%D0%B5%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%96%D0%B2%20%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B8.> 
+### [6] https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F_%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%BD%D1%8F#:~:text=Software%20development%20methodology {#link6}
 
-<a name="link7"></a>[7] <https://www.atlassian.com/ru/agile> 
+### [7] https://www.atlassian.com/ru/agile {#link7}
 
-<a name="link8"></a>[8] <https://www.atlassian.com/ru/agile/scrum> 
+### [8] https://www.atlassian.com/ru/agile/scrum {#link8}
 
-<a name="link9"></a>[9] <https://www.atlassian.com/ru/agile/scrum/sprints> 
+### [9] https://www.atlassian.com/ru/agile/scrum/sprints {#link9}
 
-<a name="link10"></a>[10] <https://www.atlassian.com/ru/agile/kanban> 
+### [10] https://www.atlassian.com/ru/agile/kanban {#link10}
 
-<a name="link11"></a>[11] <https://www.atlassian.com/ru/agile/kanban/boards> 
+### [11] https://www.atlassian.com/ru/agile/kanban/boards {#link11}
 
-<a name="link12"></a>[12] <https://www.atlassian.com/ru/agile/kanban/cards> 
+### [12] https://www.atlassian.com/ru/agile/kanban/cards {#link12}
 
-<a name="link13"></a>[13] <https://uk.wikipedia.org/wiki/%D0%92%D1%96%D1%85%D0%B0_(%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8)#:~:text=milestone)%20%E2%80%94%20%D1%82%D0%B5%D1%80%D0%BC%D1%96%D0%BD%20(%D1%88%D0%B8%D1%80%D0%BE%D0%BA%D0%BE%20%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D0%BE%D0%B2%D1%83%D1%94%D1%82%D1%8C%D1%81%D1%8F,%D0%BD%D0%B0%20%D0%BD%D0%BE%D0%B2%D1%83%20%D1%81%D1%82%D0%B0%D0%B4%D1%96%D1%8E%20%D1%80%D0%BE%D0%B7%D0%B2%D0%B8%D1%82%D0%BA%D1%83%20%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D1%83.> 
+### [13] https://uk.wikipedia.org/wiki/%D0%92%D1%96%D1%85%D0%B0_(%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8)#:~:text=milestone {#link13}
 
-<a name="link14"></a>[14] <https://www.atlassian.com/ru/agile/scrum/backlogs> 
+### [14] https://www.atlassian.com/ru/agile/scrum/backlogs {#link14}
 
-<a name="link15"></a>[15] <https://wezom.com.ua/ua/blog/metodologija-razrabotki-programmnogo-obespechenija> 
+### [15] https://wezom.com.ua/ua/blog/metodologija-razrabotki-programmnogo-obespechenija {#link15}
 
-<a name="link16"></a>[16] <https://ru.wikipedia.org/wiki/Артефакт_(UML)> 
+### [16] https://ru.wikipedia.org/wiki/Артефакт_(UML) {#link16}

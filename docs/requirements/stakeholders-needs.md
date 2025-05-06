@@ -33,11 +33,11 @@
 
 ### Посилання
 
-<a name="link1"></a>[1] <https://blog.processology.net/what-is-a-business-process?hs_amp=true>
+### [1] https://blog.processology.net/what-is-a-business-process?hs_amp=true {#link1}
 
-<a name="link2"></a>[2] <https://ru.wikipedia.org/wiki/FURPS>
+### [2] https://ru.wikipedia.org/wiki/FURPS {#link2}
 
-<a name="link3"></a>[3] <http://www.opengroup.org/public/arch/p4/bus_scen/bus_scen.htm>
+### [3] http://www.opengroup.org/public/arch/p4/bus_scen/bus_scen.htm {#link3}
 
 Інші посилання див. "[Посилання](state-of-the-art.html#посилання)"
 
