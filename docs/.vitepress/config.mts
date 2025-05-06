@@ -10,7 +10,7 @@ export default defineConfig({
   title: "Voice of Experts",
   description: "Лабораторні роботи з дисципліни Організація баз даних",
   lang: "uk",
-  base: "/edu/db_labs/",
+  base: "/edu_db_labs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
