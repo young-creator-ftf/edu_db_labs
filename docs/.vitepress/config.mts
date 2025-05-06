@@ -67,7 +67,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/KyryloGomberg/edu_db_labs" },
+      { icon: "github", link: "https://github.com/KyryloGomberg/edu_db_labs/" },
     ],
   },
 
