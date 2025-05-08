@@ -7,7 +7,7 @@ import markdownTaskLists from "markdown-it-task-lists";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Voice of Experts",
+  title: "Система управління проєктами",
   description: "Лабораторні роботи з дисципліни Організація баз даних",
   lang: "uk",
   base: "/edu_db_labs/",
