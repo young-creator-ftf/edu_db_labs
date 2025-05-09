@@ -143,8 +143,7 @@ start;
 
 |Система|
 :Завантажує список курсів;
-<font color="red"><b>ViewCourses_NoEnrollment_EXC;
-<font color="red"><b>ViewCourses_ServerError_EXC;
+
 
 |Студент|
 :Переглядає список доступних курсів;
@@ -160,10 +159,10 @@ start;
 
 |Система|
 :Перевіряє доступ;
-<font color="red"><b>ViewMaterials_AccessDenied_EXC;
+
 
 :Завантажує матеріали;
-<font color="red"><b>ViewMaterials_NoContent_EXC;
+
 
 |Студент|
 :Переглядає лекції, файли, відео;
