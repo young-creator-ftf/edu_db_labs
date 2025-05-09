@@ -131,3 +131,19 @@ Admin --> CheckGrades
 Admin --> MessageTeacher
 @enduml
 ## Сценарії Використання
+
+# студент
+@startuml
+|Студент|
+start;
+:Заходить на сторінку "Мої курси";
+
+|Система|
+:Завантажує список курсів;
+<font color="red"><b>ViewCourses_NoEnrollment_EXC;
+<font color="red"><b>ViewCourses_ServerError_EXC;
+
+|Студент|
+:Переглядає список доступних курсів;
+stop;
+@enduml
