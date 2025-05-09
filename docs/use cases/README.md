@@ -54,4 +54,20 @@ Admin -r-> ManageUsers
 Admin -l-> ConfigureSystem
 
 @enduml
+
+# Student
+
+@startuml
+actor "Студент" as Student
+
+usecase "Перегляд\nнавчальних матеріалів" as ViewMaterials
+usecase "Виконання\nдомашніх завдань" as DoAssignments
+usecase "Перевірка\nоцінок" as CheckGrades
+usecase "Зв'язок з\nвикладачем" as MessageTeacher
+
+Student --> ViewMaterials
+Student --> DoAssignments
+Student --> CheckGrades
+Student --> MessageTeacher
+@enduml
 ## Сценарії Використання
