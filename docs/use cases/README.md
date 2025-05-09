@@ -191,3 +191,19 @@ start;
 |Студент|
 stop;
 @enduml
+
+<table> <tr><td><b>ID</b></td><td><code>CheckGrades</code></td></tr> <tr><td><b>Назва:</b></td><td>Перевірити оцінки</td></tr> <tr><td><b>Учасники:</b></td><td>Студент, система</td></tr> <tr><td><b>Передумови:</b></td><td>Оцінки вже виставлені</td></tr> <tr><td><b>Результат:</b></td><td>Оцінки відображено</td></tr> <tr><td><b>Виключні ситуації:</b></td> <td> - CheckGrades_NotGradedYet_EXC – оцінки ще не виставлено<br/> </td> </tr> </table>
+
+@startuml
+|Студент|
+start;
+:Переходить у вкладку "Оцінки";
+
+|Система|
+:Завантажує оцінки;
+
+
+|Студент|
+:Переглядає оцінки;
+stop;
+@enduml
