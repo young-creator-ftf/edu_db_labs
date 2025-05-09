@@ -150,3 +150,22 @@ start;
 :Переглядає список доступних курсів;
 stop;
 @enduml
+
+<table> <tr><td><b>ID</b></td><td><code>ViewMaterials</code></td></tr> <tr><td><b>Назва:</b></td><td>Перегляд навчальних матеріалів</td></tr> <tr><td><b>Учасники:</b></td><td>Студент, система</td></tr> <tr><td><b>Передумови:</b></td><td>Студент має доступ до курсу</td></tr> <tr><td><b>Результат:</b></td><td>Завантажені навчальні матеріали</td></tr> <tr><td><b>Виключні ситуації:</b></td> <td> - ViewMaterials_AccessDenied_EXC – немає доступу до курсу<br/> - ViewMaterials_NoContent_EXC – матеріали не додано<br/> </td> </tr> </table>
+
+@startuml
+|Студент|
+start;
+:Обирає курс;
+
+|Система|
+:Перевіряє доступ;
+<font color="red"><b>ViewMaterials_AccessDenied_EXC;
+
+:Завантажує матеріали;
+<font color="red"><b>ViewMaterials_NoContent_EXC;
+
+|Студент|
+:Переглядає лекції, файли, відео;
+stop;
+@enduml
