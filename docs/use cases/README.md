@@ -133,6 +133,9 @@ Admin --> MessageTeacher
 ## Сценарії Використання
 
 # студент
+
+<table> <tr><td><b>ID</b></td><td><code>ViewCourses</code></td></tr> <tr><td><b>Назва:</b></td><td>Переглянути доступні курси</td></tr> <tr><td><b>Учасники:</b></td><td>Студент, система</td></tr> <tr><td><b>Передумови:</b></td><td>Студент авторизований</td></tr> <tr><td><b>Результат:</b></td><td>Список курсів, доступних для перегляду</td></tr> <tr><td><b>Виключні ситуації:</b></td> <td> - ViewCourses_NoEnrollment_EXC – студент ще не записаний на жоден курс<br/> - ViewCourses_ServerError_EXC – помилка завантаження курсу<br/> </td> </tr> </table>
+
 @startuml
 |Студент|
 start;
