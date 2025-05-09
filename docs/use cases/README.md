@@ -70,4 +70,31 @@ Student --> DoAssignments
 Student --> CheckGrades
 Student --> MessageTeacher
 @enduml
+
+
+# Teacher
+
+
+@startuml
+actor "Викладач" as Teacher
+
+usecase "Створення курсу" as CreateCourse
+usecase "Додавання завдань" as AddAssignment
+usecase "Оцінювання студентів" as GradeStudents
+usecase "Керування групами" as ManageGroups
+
+' Успадковані від Студента
+usecase "Перегляд\nнавчальних матеріалів" as ViewMaterials
+usecase "Перевірка\nоцінок" as CheckGrades
+usecase "Зв'язок з\nіншими викладачами" as MessageTeacher
+
+Teacher --> CreateCourse
+Teacher --> AddAssignment
+Teacher --> GradeStudents
+Teacher --> ManageGroups
+
+Teacher --> ViewMaterials
+Teacher --> CheckGrades
+Teacher --> MessageTeacher
+@enduml
 ## Сценарії Використання
