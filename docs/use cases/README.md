@@ -97,4 +97,37 @@ Teacher --> ViewMaterials
 Teacher --> CheckGrades
 Teacher --> MessageTeacher
 @enduml
+
+
+# Administrator
+
+@startuml
+actor "Адміністратор" as Admin
+
+usecase "Керування користувачами" as ManageUsers
+usecase "Налаштування системи" as ConfigureSystem
+
+' Успадковані від Викладача
+usecase "Створення курсу" as CreateCourse
+usecase "Додавання завдань" as AddAssignment
+usecase "Оцінювання студентів" as GradeStudents
+usecase "Керування групами" as ManageGroups
+
+' Успадковані від Студента
+usecase "Перегляд матеріалів" as ViewMaterials
+usecase "Перевірка оцінок" as CheckGrades
+usecase "Повідомлення викладачу" as MessageTeacher
+
+Admin --> ManageUsers
+Admin --> ConfigureSystem
+
+Admin --> CreateCourse
+Admin --> AddAssignment
+Admin --> GradeStudents
+Admin --> ManageGroups
+
+Admin --> ViewMaterials
+Admin --> CheckGrades
+Admin --> MessageTeacher
+@enduml
 ## Сценарії Використання
