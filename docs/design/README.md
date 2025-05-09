@@ -9,7 +9,121 @@
     padding: 1em;"
 >
 
+@startuml
+skinparam linetype ortho
 
+' -------------------
+' CRUD-операції
+object Create
+object Read
+object Update
+object Delete
+
+' -------------------
+' Типи операцій та інстанси
+entity OperationType {
+  name
+}
+Create    ..> OperationType : instanceOf
+Read      ..> OperationType : instanceOf
+Update    ..> OperationType : instanceOf
+Delete    ..> OperationType : instanceOf
+
+entity RequestType {
+  name
+}
+RequestType "0..*" -- "0..1" OperationType : uses
+
+entity Grant
+Grant "0..*" -- "1..1" RequestType : grants
+
+entity Access
+
+entity Role {
+  name
+}
+object StudentRole
+object TeacherRole
+object AdminRole
+StudentRole ..> Role : instanceOf
+TeacherRole ..> Role : instanceOf
+AdminRole   ..> Role : instanceOf
+
+Role "1..1" -- "0..*" Grant  : hasGrant
+Role "1..1" -- "0..*" Access : hasAccess
+
+entity User {
+  username
+  password
+  email
+}
+User "1..1" -- "0..*" Access : ownsAccess
+
+' -------------------
+' Бізнес-об’єкти навчальної системи
+entity Course {
+  title
+  description
+}
+entity Enrollment {
+  enrollDate
+}
+entity Module {
+  title
+}
+entity Lesson {
+  title
+}
+entity Assignment {
+  title
+  description
+  dueDate
+}
+entity Submission {
+  submitDate
+  content
+}
+entity Grade {
+  score
+  feedback
+}
+
+' -------------------
+' Статуси подань
+entity SubmissionStatus {
+  name
+}
+object Draft
+object Submitted
+object Graded
+Draft     ..> SubmissionStatus : instanceOf
+Submitted ..> SubmissionStatus : instanceOf
+Graded    ..> SubmissionStatus : instanceOf
+Submission "1..1" -- "0..*" SubmissionStatus : history
+
+' -------------------
+' Зв’язки між сутностями
+User       "1..*" -- "0..*" Enrollment   : enrolls
+Course     "1..1" -- "0..*" Enrollment   : hasEnrollment
+Course     "1..1" -- "0..*" Module       : contains
+Module     "1..1" -- "0..*" Lesson       : contains
+Course     "1..1" -- "0..*" Assignment   : contains
+Assignment "1..1" -- "0..*" Submission   : receives
+Submission "1..1" -- "1..1" Assignment   : forAssignment
+Submission "1..1" -- "1..1" User         : byUser
+Submission "1..1" -- "0..1" Grade        : gradedAs
+
+' -------------------
+' Посередник доступу
+entity AccessMediator
+AccessMediator "1..*" -- "1..1" Access     : mediates
+AccessMediator "0..*" -- "0..*" Course     : forCourse
+AccessMediator "0..*" -- "0..*" Module     : forModule
+AccessMediator "0..*" -- "0..*" Lesson     : forLesson
+AccessMediator "0..*" -- "0..*" Assignment : forAssignment
+AccessMediator "0..*" -- "0..*" Submission : forSubmission
+
+@enduml
 
 </center>
 
