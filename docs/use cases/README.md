@@ -132,7 +132,7 @@ Admin --> MessageTeacher
 @enduml
 ## Сценарії Використання
 
-# студент
+# Студент
 
 <table> <tr><td><b>ID</b></td><td><code>ViewCourses</code></td></tr> <tr><td><b>Назва:</b></td><td>Переглянути доступні курси</td></tr> <tr><td><b>Учасники:</b></td><td>Студент, система</td></tr> <tr><td><b>Передумови:</b></td><td>Студент авторизований</td></tr> <tr><td><b>Результат:</b></td><td>Список курсів, доступних для перегляду</td></tr> <tr><td><b>Виключні ситуації:</b></td> <td> - ViewCourses_NoEnrollment_EXC – студент ще не записаний на жоден курс<br/> - ViewCourses_ServerError_EXC – помилка завантаження курсу<br/> </td> </tr> </table>
 
@@ -230,7 +230,7 @@ start;
 stop;
 @enduml
 
-# викладач
+# Викладач
 
 <table> <tr><td><b>ID</b></td><td><code>CreateCourse</code></td></tr> <tr><td><b>Назва:</b></td><td>Створити курс</td></tr> <tr><td><b>Учасники:</b></td><td>Викладач, система</td></tr> <tr><td><b>Передумови:</b></td><td>Викладач авторизований</td></tr> <tr><td><b>Результат:</b></td><td>Курс створено в системі</td></tr> <tr><td><b>Виключні ситуації:</b></td> <td> - CreateCourse_InvalidInfo_EXC — введено невалідні дані курсу<br/> - CreateCourse_CancelButton_EXC — натиснуто “Відміна”<br/> </td> </tr> </table>
 

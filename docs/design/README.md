@@ -146,3 +146,4 @@ AccessMediator "0..*" -- "0..*" Submission : forSubmission
 
 ## Реляційна схема
 
+![Реляційна схема](https://imgur.com/a/5kP4Rye)
