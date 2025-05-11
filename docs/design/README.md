@@ -377,4 +377,4 @@ namespace AccessPolicy {
 
 ## Реляційна схема
 
-![Реляційна схема](./media/sxema.jpg)
+![Реляційна схема](./media/sxema1.jpg)
