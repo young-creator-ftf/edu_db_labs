@@ -56,7 +56,7 @@ export default defineConfig({
           },
           {
             text: "Реалізація об`єктно-реляційного відображення",
-            link: "/implementation/implementation(assignment)",
+            link: "/implementation/implementation(user)",
           },
           {
             text: "Тестування працездатності системи",
